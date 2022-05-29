@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zombie Apocalypse</title>
+  </head>
+  <style>
+    .box, input {
+      margin: 5px 0;
+    }
+    label::after, input::after {
+      content: "\a";
+      white-space: pre;
+    }
+    .submitButton {
+      cursor: pointer
+    }
+    .outputText{
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 1.2;
+    }
+  </style>
+  <script type="text/javascript" src="./zombie.js"> </script>
+  <body>
+    <div>
+      <h3> Enter details for Zombie Apocalypse and hit the submit button</h3>
+      <div class="box">
+        <label for="Dimension">Dimension:</label>
+        <input type="number" id="dimension" name="dimension">
+      </div>
+      <div class="box">
+        <label for="zombiePos">Zombie's Initial Position:</label>
+        <input type="text" id="zombiePos" name="zombiePos">
+      </div>
+      <div class="box">
+        <label for="creaturePos">Creature's Position:</label>
+        <input type="text" id="creaturePos" name="creaturePos">
+      </div>
+      <div class="box">
+        <label for="moves">Zombie Moves:</label>
+        <input type="text" id="moves" name="moves">
+      </div>
+      <div class="box">
+        <input type="button" class="submitButton" value="Submit" onclick="mainFunction()">
+      </div>
+    </div>
+    <div id="zombieOutput" class="outputText"></div>
+  </body>
+</html>
